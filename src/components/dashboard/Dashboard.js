@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Row, Form, FormGroup, FormControl, ControlLabel, Button, HelpBlock } from 'react-bootstrap';
-import './login.sass';
+import './dashboard.sass';
 
-class Login extends Component {
+class Dashboard extends Component {
 
     constructor(props) {
         super(props)
@@ -79,21 +79,7 @@ class Login extends Component {
             <div className="Login">
                 <Row>
                     <form onSubmit={this.login}>
-                        <FormGroup controlId="email" validationState={ formSubmitted ? (errors.email ? 'error' : 'success') : null }>
-                            <ControlLabel>Email</ControlLabel>
-                            <FormControl type="text" name="email" placeholder="Enter your email" onChange={this.handleInputChange} />
-                        { errors.email && 
-                            <HelpBlock>{errors.email}</HelpBlock> 
-                        }
-                        </FormGroup >
-                        <FormGroup controlId="password" validationState={ formSubmitted ? (errors.password ? 'error' : 'success') : null }>
-                            <ControlLabel>Password</ControlLabel>
-                            <FormControl type="password" name="password" placeholder="Enter your password" onChange={this.handleInputChange} />
-                        { errors.password && 
-                            <HelpBlock>{errors.password}</HelpBlock> 
-                        }
-                        </FormGroup>
-                        <Button type="submit" bsStyle="primary">Sign-In</Button>
+                            <ControlLabel>Welcome</ControlLabel>
                     </form>
                 </Row>
             </div>
@@ -101,4 +87,4 @@ class Login extends Component {
     }
 }
 
-export default Login;
+export default Dashboard;
