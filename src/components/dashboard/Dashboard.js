@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Row, Form, FormGroup, FormControl, ControlLabel, Button, HelpBlock } from 'react-bootstrap';
 import './dashboard.sass';
+import { Table } from 'reactstrap';
 
 class Dashboard extends Component {
 
@@ -25,8 +26,47 @@ class Dashboard extends Component {
                     
                 </Row>
                 <Row>
-                    User
+                    User_ID: 4
                 </Row><br /> <br />
+
+                <Row>
+                <div>
+				<Table>
+					<thead>
+						<tr>
+							<th>#User_ID</th>
+                            <th>User_Name</th>
+							<th>Product_Title</th>
+							<th>Rating</th>
+							<th>Actions</th>
+
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>1</td>
+                            <td>nish</td>
+							<td>MSOffice</td>
+							<td>4.2</td>
+							<td></td>
+						</tr>
+                        <tr>
+                            <td>2</td>
+                            <td>aaron</td>
+                            <td>USB_drive</td>
+                            <td>5.0</td>
+                            <td>
+                            </td>
+                        </tr>
+					</tbody>
+
+				</Table>
+
+				</div>
+
+                </Row>
+
                 <Row>
                     <p>
                         Search over name-of-product :
@@ -34,28 +74,10 @@ class Dashboard extends Component {
                 <input type="text" value="wind" onChange={(e) =>this.handleChange(e.target.value)} />
 
                 </Row><br /> <br />
-                <ul>
-                    <li>
-                        VS-Studio-Pro
-                    </li>
-                    <li>
-                    Windows XP
-                    </li>
-                    <li>
-                    Windows 10
-                    </li>
-                    <li>
-                    Norton Antivirus
-                    </li>
-                    <li>
-                    AWS Account
-                    </li>
 
-                </ul>
-                <br /> <br /> <br />
                 <Row>
                     <p>
-                        Get Products for name :
+                        Get Products for Username :
                     </p>
                 <input type="text" value="nishanth" onChange={(e) =>this.handleChange(e.target.value)} />
 
