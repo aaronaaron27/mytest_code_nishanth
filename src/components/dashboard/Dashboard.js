@@ -8,9 +8,7 @@ class Dashboard extends Component {
         super(props)
 
         this.state = {
-            formData: {}, // Contains login form data
-            errors: {}, // Contains login field errors
-            loading: false // Indicates in progress state of login form
+           loggedIn: true
         }
     }
 
@@ -60,6 +58,24 @@ class Dashboard extends Component {
                         Get Products for name :
                     </p>
                 <input type="text" value="nishanth" onChange={(e) =>this.handleChange(e.target.value)} />
+
+                <ul>
+                    <li>
+                        VS-Studio-Pro
+                    </li>
+                    <li>
+                    Ubuntu OS
+                    </li>
+                    <li>
+                    SanDisk Pendrive
+                    </li>
+                    <li>
+                    DevExpress tools
+                    </li>
+                    
+
+                </ul>
+                <br /> <br /> <br />
 
                 </Row><br /> <br />
 

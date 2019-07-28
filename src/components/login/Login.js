@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Row, Form, FormGroup, FormControl, ControlLabel, Button, HelpBlock } from 'react-bootstrap';
 import './login.sass';
+import { browserHistory } from 'react-router';
 
 class Login extends Component {
 
@@ -11,7 +12,9 @@ class Login extends Component {
             formData: {}, // Contains login form data
             errors: {}, // Contains login field errors
             formSubmitted: false, // Indicates submit status of login form 
-            loading: false // Indicates in progress state of login form
+            loading: false, // Indicates in progress state of login form
+            showDashboard: false,
+            loggedIn: false
         }
     }
 
@@ -61,8 +64,17 @@ class Login extends Component {
         let errors = this.validateLoginForm();
 
         if(errors === true){
-            alert("You are successfully signed in...");
-            window.location.reload()   
+            alert("Logged in...");
+            //browserHistory.push('/dashboard/Dashboard');
+
+            this.props.history.push("/dashboard/Dashboard");
+
+            //window.location.reload()   
+            //this.history.pushState(null, 'login');
+            this.setState({
+                showDashboard: true
+
+            });   
         } else {
             this.setState({
                 errors: errors,
@@ -94,8 +106,10 @@ class Login extends Component {
                         }
                         </FormGroup>
                         <Button type="submit" bsStyle="primary">Sign-In</Button>
+                        
                     </form>
                 </Row>
+
             </div>
         )
     }

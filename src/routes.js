@@ -13,7 +13,7 @@ import Dashboard from './components/dashboard/Dashboard';
  * Don't forget to import the components above after adding new route.
  */
 export default (
-  <Route path="/" component={Login}>
+  <Route path="/" component={App}>
     <Route path="/login/Login" component={Login} />
     <Route path="/dashboard/Dashboard" component={Dashboard} />
   </Route>
